@@ -1,0 +1,34 @@
+.num-row {
+  border: 2px solid rgb(66, 66, 66);
+  border-bottom: 0px;
+  padding: 0.25rem;
+  width: 10rem;
+  text-align: center;
+  background-color: rgb(35, 35, 35);
+  animation: newRow 500ms;
+  overflow: scroll;
+
+  &:last-of-type {
+    border-bottom: 2px solid rgb(66, 66, 66);
+  }
+
+  &.correct {
+    color: $green;
+  }
+  &.incorrect {
+    color: $red;
+    border-left: 0px;
+  }
+}
+
+@keyframes newRow {
+  from {
+    opacity: 0;
+    background-color: rgb(181, 181, 181);
+  }
+
+  to {
+    opacity: 1;
+    background-color: rgb(35, 35, 35);
+  }
+}

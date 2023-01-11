@@ -1,0 +1,11 @@
+.table {
+  display: flex;
+  justify-content: center;
+  max-height: 70vh;
+  overflow-y: scroll;
+
+  h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

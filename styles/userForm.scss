@@ -1,0 +1,32 @@
+.user-form {
+  margin-block: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  width: max(60%, 25rem);
+  &:focus-within {
+    outline: 2px solid rgba(232, 232, 232, 0.5);
+  }
+  input {
+    border: none;
+    background-color: rgb(68, 68, 68);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    color: rgb(208, 208, 208);
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  button {
+    border: none;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+  }
+}
+
+.user-popup {
+  margin-block: 2rem 0.5rem;
+  height: 1rem;
+}

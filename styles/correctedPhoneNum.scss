@@ -1,0 +1,18 @@
+.num-row.corrected {
+  width: 30rem;
+  padding-inline: 1rem;
+  border-left: 0;
+}
+.corrected-char {
+  color: $red;
+  opacity: 0.3;
+}
+
+.correct-char {
+  color: white;
+  opacity: 0.8;
+}
+
+.correct-number {
+  color: $green;
+}
