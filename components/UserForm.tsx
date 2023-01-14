@@ -41,7 +41,7 @@ const UserForm: React.FC<Props> = ({
       setUserPopup("Forse dovresti inserire prima un numero :D");
       return;
     }
-    if (phoneValidation(inputNum) === "correct") {
+    if (phoneValidation(inputNum)) {
       //add to correct nums list
       setCorrectNums((prev) => [
         { id: new Date().getTime().toString(), sms_phone: inputNum },
@@ -82,14 +82,19 @@ const UserForm: React.FC<Props> = ({
 
   return (
     <>
-      <p className="user-popup">{showPopup && userPopup}</p>
+      <p data-cy="popup-text" className="user-popup">
+        {showPopup && userPopup}
+      </p>
       <form className="user-form" onSubmit={(e) => handleSubmit(e)}>
         <input
+          data-cy="input"
           type="tel"
           onChange={(e) => handleOnChange(e)}
           value={inputNum}
         />
-        <button type="submit">Inserisci</button>
+        <button data-cy="submit-btn" type="submit">
+          Inserisci
+        </button>
       </form>
     </>
   );

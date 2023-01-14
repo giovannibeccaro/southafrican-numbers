@@ -7,7 +7,10 @@ type Props = DataType & {
 
 const PhoneNumRow: React.FC<Props> = ({ id, sms_phone, isCorrect }) => {
   return (
-    <div className={`num-row ${isCorrect ? "correct" : "incorrect"}`}>
+    <div
+      data-cy={`${isCorrect ? "correct-num" : "incorrect-num"}`}
+      className={`num-row ${isCorrect ? "correct" : "incorrect"}`}
+    >
       {sms_phone}
     </div>
   );

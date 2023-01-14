@@ -47,7 +47,7 @@ const NumbersSection: React.FC<Props> = ({
       const correctArr: DataType[] = [];
       const incorrectArr: DataType[] = [];
       nums.forEach((el) => {
-        if (phoneValidation(el.sms_phone) === "correct") {
+        if (phoneValidation(el.sms_phone)) {
           correctArr.push(el);
         } else incorrectArr.push(el);
       });
