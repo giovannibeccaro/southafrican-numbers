@@ -75,9 +75,7 @@ const UserForm: React.FC<Props> = ({
         );
       }
     }
-  }
-  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setInputNum(e.target.value);
+    setInputNum("");
   }
 
   return (
@@ -89,7 +87,7 @@ const UserForm: React.FC<Props> = ({
         <input
           data-cy="input"
           type="tel"
-          onChange={(e) => handleOnChange(e)}
+          onChange={(e) => setInputNum(e.target.value)}
           value={inputNum}
         />
         <button data-cy="submit-btn" type="submit">
